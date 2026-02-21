@@ -1,0 +1,4 @@
+name: Nisit-DeeDen-local
+variables:
+  - name: host
+    value: localhost
