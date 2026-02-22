@@ -1,0 +1,25 @@
+info:
+  name: Show application by id
+  type: http
+  seq: 2
+
+http:
+  method: GET
+  url: "{{host}}/api/applications/{{id}}"
+  headers:
+    - name: Accept
+      value: application/json
+    - name: Content-Type
+      value: application/json
+  auth: inherit
+
+runtime:
+  variables:
+    - name: id
+      value: "2"
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
