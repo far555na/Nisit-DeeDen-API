@@ -1,0 +1,15 @@
+info:
+  name: Get all rounds
+  type: http
+  seq: 1
+
+http:
+  method: GET
+  url: "{{host}}/api/rounds"
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
