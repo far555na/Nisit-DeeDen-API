@@ -12,6 +12,8 @@ runtime:
   variables:
     - name: category-slug
       value: activity
+    - name: host
+      value: localhost
 
 settings:
   encodeUrl: true

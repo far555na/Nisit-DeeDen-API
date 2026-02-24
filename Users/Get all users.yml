@@ -5,8 +5,13 @@ info:
 
 http:
   method: GET
-  url: "{{hosr}}/api/users"
+  url: "{{host}}/api/users"
   auth: inherit
+
+runtime:
+  variables:
+    - name: host
+      value: localhost
 
 settings:
   encodeUrl: true

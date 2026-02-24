@@ -17,6 +17,8 @@ runtime:
   variables:
     - name: id
       value: "10"
+    - name: host
+      value: localhost
 
 settings:
   encodeUrl: true
