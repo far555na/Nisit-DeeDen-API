@@ -1,20 +1,17 @@
 info:
-  name: Show category by slug
+  name: Delete category
   type: http
-  seq: 2
+  seq: 4
 
 http:
-  method: GET
+  method: DELETE
   url: "{{host}}/api/categories/{{category-slug}}"
-  headers:
-    - name: Accept
-      value: application/json
-    - name: Content-Type
-      value: application/json
   auth: inherit
 
 runtime:
   variables:
+    - name: id
+      value: "1"
     - name: category-slug
       value: study
 
