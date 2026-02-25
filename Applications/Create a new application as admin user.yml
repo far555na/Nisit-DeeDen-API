@@ -12,12 +12,6 @@ http:
   body:
     type: multipart-form
     data:
-      - name: category_id
-        type: text
-        value: "1"
-      - name: values[1]
-        type: text
-        value: Alpaca.co
       - name: values[2]
         type: file
         value:
@@ -38,12 +32,20 @@ http:
         type: file
         value:
           - /private/var/folders/wz/yqds9q7n11l30trf_v5cpp_h0000gn/T/TemporaryItems/com.apple.Photos.NSItemProvider/uuid=84FECC06-391D-4444-80D9-710B07725EA5&code=001&library=1&type=1&mode=1&loc=true&cap=true.jpeg/Photo on 23-7-2568 BE at 19.21.jpeg
+      - name: values[1]
+        type: text
+        value: Alpaca.co
+      - name: category_id
+        type: text
+        value: "1"
   auth: inherit
 
 runtime:
   variables:
     - name: token
       value: ""
+    - name: host
+      value: localhost
 
 settings:
   encodeUrl: true
