@@ -6,7 +6,30 @@ info:
 http:
   method: POST
   url: "{{host}}/api/login"
+  body:
+    type: multipart-form
+    data:
+      - name: email
+        type: text
+        value: admin@example.com
+      - name: password
+        type: text
+        value: password
+      - name: email
+        type: text
+        value: ""
+        disabled: true
   auth: inherit
+
+runtime:
+  scripts:
+    - type: after-response
+      code: |-
+        const data = res.getBody();
+
+        if (res.getStatus() === 200 && data.token) {
+            bru.setEnvVar("token", data.token);
+        }
 
 settings:
   encodeUrl: true

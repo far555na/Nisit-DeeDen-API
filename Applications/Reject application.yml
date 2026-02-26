@@ -1,0 +1,34 @@
+info:
+  name: Reject application
+  type: http
+  seq: 12
+
+http:
+  method: PATCH
+  url: "{{host}}/api/applications/{{id}}/status"
+  headers:
+    - name: Authorization
+      value: Bearer {{token}}
+    - name: Accept
+      value: application/json
+    - name: Content-Type
+      value: application/json
+  body:
+    type: json
+    data: |-
+      {
+        "action": "rejected",
+        "rejection_reason": "Missing required signature on document."
+      }
+  auth: inherit
+
+runtime:
+  variables:
+    - name: id
+      value: "2"
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
