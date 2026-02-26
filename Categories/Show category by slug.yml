@@ -6,6 +6,11 @@ info:
 http:
   method: GET
   url: "{{host}}/api/categories/{{category-slug}}"
+  headers:
+    - name: Accept
+      value: application/json
+    - name: Content-Type
+      value: application/json
   auth: inherit
 
 runtime:

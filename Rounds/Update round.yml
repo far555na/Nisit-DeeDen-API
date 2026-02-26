@@ -1,0 +1,45 @@
+info:
+  name: Update round
+  type: http
+  seq: 5
+
+http:
+  method: PUT
+  url: "{{host}}/api/rounds/{{id}}"
+  headers:
+    - name: Accept
+      value: application/json
+    - name: token
+      value: Bearer {{token}}
+  body:
+    type: multipart-form
+    data:
+      - name: academic_year
+        type: text
+        value: "2025"
+      - name: semester
+        type: text
+        value: "2"
+      - name: status
+        type: text
+        value: OPEN
+      - name: start_time
+        type: text
+        value: 2026-03-17T12:32
+      - name: end_time
+        type: text
+        value: 2026-04-17T12:32
+  auth: inherit
+
+runtime:
+  variables:
+    - name: id
+      value: "6"
+    - name: token
+      value: 5|TgeeaWdPuXV7An6530hgWa0BsYBP1hb1ZOavSogI6bd68055
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

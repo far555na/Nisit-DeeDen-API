@@ -1,0 +1,22 @@
+info:
+  name: Delete category
+  type: http
+  seq: 4
+
+http:
+  method: DELETE
+  url: "{{host}}/api/categories/{{category-slug}}"
+  auth: inherit
+
+runtime:
+  variables:
+    - name: id
+      value: "1"
+    - name: category-slug
+      value: study
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

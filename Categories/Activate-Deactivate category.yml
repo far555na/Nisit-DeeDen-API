@@ -1,0 +1,20 @@
+info:
+  name: Activate/Deactivate category
+  type: http
+  seq: 5
+
+http:
+  method: PATCH
+  url: "{{host}}/api/categories/{{category-slug}}/toggle-status"
+  auth: inherit
+
+runtime:
+  variables:
+    - name: category-slug
+      value: study
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
