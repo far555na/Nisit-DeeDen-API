@@ -1,0 +1,33 @@
+info:
+  name: Approve application
+  type: http
+  seq: 11
+
+http:
+  method: PATCH
+  url: "{{host}}/api/applications/{{id}}/status"
+  headers:
+    - name: Authorization
+      value: Bearer {{token}}
+    - name: Accept
+      value: application/json
+    - name: Content-Type
+      value: application/json
+  body:
+    type: json
+    data: |-
+      {
+        "action": "approve" 
+      }
+  auth: inherit
+
+runtime:
+  variables:
+    - name: id
+      value: "1"
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

@@ -6,7 +6,51 @@ info:
 http:
   method: POST
   url: "{{host}}/api/categories"
+  body:
+    type: multipart-form
+    data:
+      - name: name
+        type: text
+        value: Study
+      - name: slug
+        type: text
+        value: study
+      - name: description
+        type: text
+        value: good gpa
+      - name: attributes[0][label]
+        type: text
+        value: Transciption
+      - name: attributes[0][type]
+        type: text
+        value: file
+      - name: attributes[0][is_required]
+        type: text
+        value: "true"
+      - name: attributes[1][label]
+        type: text
+        value: SOP
+      - name: attributes[1][type]
+        type: text
+        value: textarea
+      - name: attributes[1][is_required]
+        type: text
+        value: "true"
+      - name: attributes[2][label]
+        type: text
+        value: GPA
+      - name: attributes[2][type]
+        type: text
+        value: text
+      - name: attributes[2][is_required]
+        type: text
+        value: "true"
   auth: inherit
+
+runtime:
+  variables:
+    - name: host
+      value: localhost
 
 settings:
   encodeUrl: true
