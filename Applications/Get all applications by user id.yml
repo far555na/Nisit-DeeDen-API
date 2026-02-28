@@ -1,0 +1,21 @@
+info:
+  name: Get all applications by user id
+  type: http
+  seq: 13
+
+http:
+  method: POST
+  url: "{{host}}/api/applications/by-user-id"
+  body:
+    type: json
+    data: |-
+      {
+        "user_id": 50
+      }
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

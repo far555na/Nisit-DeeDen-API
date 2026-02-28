@@ -1,0 +1,30 @@
+info:
+  name: Update category
+  type: http
+  seq: 6
+
+http:
+  method: PUT
+  url: "{{host}}/api/categories/{{category-slug}}"
+  body:
+    type: json
+    data: |-
+      {
+        "name": "Academic Excellence",
+        "attributes": [
+          { "id": null, "label": "GPAX", "type": "text" },      
+          { "id": null, "label": "Certificate", "type": "file" } 
+        ]
+      }
+  auth: inherit
+
+runtime:
+  variables:
+    - name: category-slug
+      value: study
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

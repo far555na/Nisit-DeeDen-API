@@ -5,7 +5,14 @@ info:
 
 http:
   method: GET
-  url: "{{host}}/api/applicatoins/committee"
+  url: "{{host}}/api/applications/committee?Accept=application/json&Content-Type=application/json"
+  params:
+    - name: Accept
+      value: application/json
+      type: query
+    - name: Content-Type
+      value: application/json
+      type: query
   auth: inherit
 
 settings:

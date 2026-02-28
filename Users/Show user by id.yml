@@ -16,7 +16,7 @@ http:
 runtime:
   variables:
     - name: id
-      value: "75"
+      value: "50"
 
 settings:
   encodeUrl: true

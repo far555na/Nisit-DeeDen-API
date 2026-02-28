@@ -5,7 +5,12 @@ info:
 
 http:
   method: GET
-  url: ""
+  url: "{{host}}/api/applications/associate-dean"
+  headers:
+    - name: Accept
+      value: application/json
+    - name: Content-Type
+      value: application/json
   auth: inherit
 
 settings:
