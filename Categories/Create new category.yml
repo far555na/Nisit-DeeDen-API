@@ -47,6 +47,11 @@ http:
         value: "true"
   auth: inherit
 
+runtime:
+  variables:
+    - name: host
+      value: localhost
+
 settings:
   encodeUrl: true
   timeout: 0

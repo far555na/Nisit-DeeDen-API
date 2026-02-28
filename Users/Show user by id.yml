@@ -16,7 +16,13 @@ http:
 runtime:
   variables:
     - name: id
+<<<<<<< HEAD
       value: "50"
+=======
+      value: "10"
+    - name: host
+      value: localhost
+>>>>>>> 1940087015e010abe928b4ccef17304e5ac7895d
 
 settings:
   encodeUrl: true

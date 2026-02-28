@@ -16,7 +16,9 @@ http:
 runtime:
   variables:
     - name: category-slug
-      value: study
+      value: activity
+    - name: host
+      value: localhost
 
 settings:
   encodeUrl: true
