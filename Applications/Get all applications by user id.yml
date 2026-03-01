@@ -4,15 +4,17 @@ info:
   seq: 13
 
 http:
-  method: POST
-  url: "{{host}}/api/applications/by-user-id"
+  method: GET
+  url: "{{host}}/api/applications/user/{{id}}"
   body:
     type: json
-    data: |-
-      {
-        "user_id": 50
-      }
+    data: ""
   auth: inherit
+
+runtime:
+  variables:
+    - name: id
+      value: "50"
 
 settings:
   encodeUrl: true
