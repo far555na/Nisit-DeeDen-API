@@ -1,11 +1,18 @@
 info:
-  name: Get all applications
+  name: Get all applications in domain
   type: http
   seq: 1
 
 http:
   method: GET
   url: "{{host}}/api/applications"
+  headers:
+    - name: Authorization
+      value: Bearer {{token}}
+    - name: Accept
+      value: application/json
+    - name: Content-Type
+      value: application/json
   auth: inherit
 
 runtime:
