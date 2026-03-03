@@ -1,0 +1,45 @@
+info:
+  name: Register new user
+  type: http
+  seq: 4
+
+http:
+  method: POST
+  url: "{{host}}/api/register"
+  body:
+    type: multipart-form
+    data:
+      - name: name
+        type: text
+        value: Mekki Na
+      - name: email
+        type: text
+        value: mek@example
+      - name: password
+        type: text
+        value: password
+      - name: password_confirmation
+        type: text
+        value: password
+      - name: university_id
+        type: text
+        value: "6610405891"
+      - name: faculty
+        type: text
+        value: Science
+      - name: department
+        type: text
+        value: Biology
+      - name: domain
+        type: text
+        value: Bangkhen
+      - name: photo
+        type: text
+        value: ""
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

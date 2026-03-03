@@ -12,12 +12,28 @@ http:
       - name: email
         type: text
         value: admin@example.com
+        disabled: true
       - name: password
         type: text
         value: password
       - name: email
         type: text
-        value: ""
+        value: stamp@example.com
+        disabled: true
+      - name: email
+        type: text
+        value: hana@example.com
+        disabled: true
+      - name: email
+        type: text
+        value: sean@example.com
+      - name: email
+        type: text
+        value: racha@example.com
+        disabled: true
+      - name: email
+        type: text
+        value: chal@example.com
         disabled: true
   auth: inherit
 

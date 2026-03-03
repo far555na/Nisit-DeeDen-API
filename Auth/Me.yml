@@ -15,11 +15,6 @@ http:
       value: application/json
   auth: inherit
 
-runtime:
-  variables:
-    - name: token
-      value: 4|SI57DVRZGIDqPJeTeFNAI0Z8Isxw154bbRC5zV7Ka08f3e06
-
 settings:
   encodeUrl: true
   timeout: 0

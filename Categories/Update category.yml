@@ -6,14 +6,32 @@ info:
 http:
   method: PUT
   url: "{{host}}/api/categories/{{category-slug}}"
+  headers:
+    - name: Accept
+      value: application/json
+    - name: Content-Type
+      value: application/json
   body:
     type: json
     data: |-
       {
         "name": "Academic Excellence",
         "attributes": [
-          { "id": null, "label": "GPAX", "type": "text" },      
-          { "id": null, "label": "Certificate", "type": "file" } 
+          {
+            "id": 13,
+            "label": "GPAX",
+            "type": "text"
+          },
+          {
+            "id": 14,
+            "label": "Certificate",
+            "type": "file"
+          },
+          {
+            "id": 15,
+            "label": "Certificate2",
+            "type": "file"
+          }
         ]
       }
   auth: inherit
