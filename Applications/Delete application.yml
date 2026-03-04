@@ -1,0 +1,23 @@
+info:
+  name: Delete application
+  type: http
+  seq: 14
+
+http:
+  method: DELETE
+  url: "{{host}}/api/applications/{{id}}"
+  headers:
+    - name: Authorization
+      value: Bearer {{token}}
+  auth: inherit
+
+runtime:
+  variables:
+    - name: id
+      value: "73"
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
