@@ -7,6 +7,8 @@ http:
   method: GET
   url: "{{host}}/api/categories/{{category-slug}}"
   headers:
+    - name: Authorization
+      value: Bearer {{token}}
     - name: Accept
       value: application/json
     - name: Content-Type
@@ -16,7 +18,7 @@ http:
 runtime:
   variables:
     - name: category-slug
-      value: activity
+      value: behavior
     - name: host
       value: localhost
 

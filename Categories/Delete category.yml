@@ -6,6 +6,9 @@ info:
 http:
   method: DELETE
   url: "{{host}}/api/categories/{{category-slug}}"
+  headers:
+    - name: Authorization
+      value: Bearer {{token}}
   auth: inherit
 
 runtime:

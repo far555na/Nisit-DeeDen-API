@@ -6,12 +6,15 @@ info:
 http:
   method: PATCH
   url: "{{host}}/api/categories/{{category-slug}}/toggle-status"
+  headers:
+    - name: Authorization
+      value: Bearer {{token}}
   auth: inherit
 
 runtime:
   variables:
     - name: category-slug
-      value: study
+      value: study-bangkhen
 
 settings:
   encodeUrl: true

@@ -6,15 +6,18 @@ info:
 http:
   method: POST
   url: "{{host}}/api/categories"
+  headers:
+    - name: Authorization
+      value: Bearer {{token}}
   body:
     type: multipart-form
     data:
       - name: name
         type: text
         value: Study
-      - name: slug
+      - name: icon
         type: text
-        value: study
+        value: ""
       - name: description
         type: text
         value: good gpa
