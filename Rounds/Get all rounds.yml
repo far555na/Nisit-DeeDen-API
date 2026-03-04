@@ -6,6 +6,13 @@ info:
 http:
   method: GET
   url: "{{host}}/api/rounds"
+  headers:
+    - name: Authorization
+      value: Bearer {{token}}
+    - name: Accept
+      value: application/json
+    - name: Content-Type
+      value: application/json
   auth: inherit
 
 settings:

@@ -6,6 +6,9 @@ info:
 http:
   method: GET
   url: "{{host}}/api/rounds/next-expected"
+  headers:
+    - name: Authorization
+      value: Bearer {{token}}
   auth: inherit
 
 settings:

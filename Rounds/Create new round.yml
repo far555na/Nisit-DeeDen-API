@@ -6,6 +6,9 @@ info:
 http:
   method: POST
   url: "{{host}}/api/rounds"
+  headers:
+    - name: Authorization
+      value: Bearer {{token}}
   body:
     type: multipart-form
     data:
