@@ -1,7 +1,7 @@
 info:
   name: Approve application
   type: http
-  seq: 11
+  seq: 6
 
 http:
   method: PATCH

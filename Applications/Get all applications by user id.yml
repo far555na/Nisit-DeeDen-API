@@ -1,7 +1,7 @@
 info:
   name: Get all applications by user id
   type: http
-  seq: 13
+  seq: 8
 
 http:
   method: GET

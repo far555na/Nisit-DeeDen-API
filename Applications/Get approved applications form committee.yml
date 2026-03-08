@@ -1,7 +1,7 @@
 info:
   name: Get approved applications form committee
   type: http
-  seq: 9
+  seq: 4
 
 http:
   method: GET

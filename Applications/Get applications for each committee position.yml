@@ -1,11 +1,11 @@
 info:
-  name: Update application
+  name: Get applications for each committee position
   type: http
-  seq: 9
+  seq: 11
 
 http:
-  method: PUT
-  url: "{{host}}/api/applications/{{id}}"
+  method: GET
+  url: "{{host}}/api/application/by-position"
   auth: inherit
 
 settings:
