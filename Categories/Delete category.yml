@@ -5,7 +5,7 @@ info:
 
 http:
   method: DELETE
-  url: "{{host}}/api/categories/{{category-slug}}"
+  url: "{{host}}/api/categories/{{id}}"
   headers:
     - name: Authorization
       value: Bearer {{token}}
@@ -14,7 +14,7 @@ http:
 runtime:
   variables:
     - name: id
-      value: "1"
+      value: "20"
     - name: category-slug
       value: study
 
