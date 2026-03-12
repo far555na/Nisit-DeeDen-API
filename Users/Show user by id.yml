@@ -5,28 +5,20 @@ info:
 
 http:
   method: GET
-  url: "{{host}}/api/users/{{id}}?Authorization=Bearer {{token}}&Accept=application/json&Content-Type=application/json"
+  url: "{{host}}/api/users/{{id}}"
   headers:
-    - name: Accept
-      value: application/json
-    - name: Content-Type
-      value: application/json
-  params:
     - name: Authorization
       value: Bearer {{token}}
-      type: query
     - name: Accept
       value: application/json
-      type: query
     - name: Content-Type
       value: application/json
-      type: query
   auth: inherit
 
 runtime:
   variables:
     - name: id
-      value: "10"
+      value: "3"
     - name: host
       value: localhost
 

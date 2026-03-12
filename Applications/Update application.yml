@@ -8,6 +8,11 @@ http:
   url: "{{host}}/api/applications/{{id}}"
   auth: inherit
 
+runtime:
+  variables:
+    - name: id
+      value: "34"
+
 settings:
   encodeUrl: true
   timeout: 0
